@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOME PAGE</h1>
+    <ul>
+        <% if (locals.user){%>
+            <a href="/user/profile">
+            <li><%= user.name %></li>
+            </a>
+            <li>
+                <a href="/user/signout">signout</a>
+            </li>
+        <%} else {%>
+            <li>
+                <a href="/user/sigin">sign in</a>
+            </li>
+            <li>
+                <a href="/user/login">login</a>
+            </li>
+
+        <%}%>
+
+    </ul>
+    
+</body>
+</html>
