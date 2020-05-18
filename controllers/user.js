@@ -1,5 +1,6 @@
 const User = require('../models/user');
 
+
 module.exports.signin=function(req,res){
     //console.log('reached');
     if(req.isAuthenticated()){
@@ -59,3 +60,5 @@ module.exports.destroySession= function(req, res){
     req.logout();
     return res.redirect('/');
 }
+
+
