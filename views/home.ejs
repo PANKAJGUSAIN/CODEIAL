@@ -34,5 +34,17 @@
         </form>
     </section>
     
+    <section id='post-section'>
+        <ul>
+            <% for (post of posts){%>
+                <li><%= post.content %></li>
+                <small><%=post.user.name %></small>
+                <br>
+                <hr>
+                <br>
+            <%}%>
+        </ul>
+
+    </section>
 </body>
 </html>
