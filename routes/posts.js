@@ -7,6 +7,6 @@ const passport =require('passport');
 const postController =require('../controllers/post');
 
 //post or add a questioner
-router.post('/create',postController.post_content);
+router.post('/create',passport.checkAuthentication,postController.post_content);
 
 module.exports =router;
