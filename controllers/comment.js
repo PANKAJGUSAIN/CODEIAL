@@ -9,7 +9,7 @@ module.exports.create =function(req,res){
     Post.findById(req.body.post,function(err,post){
         if(post){
             Comment.create({
-                comment :req.body.comment,
+                content :req.body.content,
                 post :req.body.post,
                 user :req.user._id
             },function(err,comment){

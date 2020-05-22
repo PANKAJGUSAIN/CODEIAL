@@ -30,7 +30,7 @@
         <%if(locals.user){%>
         <h4>Posts</h4>
         <form action="/post/create" method="POST" id="new-post-form">
-            <textarea name="content" cols="30" rows="3"></textarea>
+            <textarea name="content" cols="30" rows="3" required></textarea>
             <input type="submit" value="Post">
         </form>
         <%}%>
@@ -46,12 +46,25 @@
                 <div class="post-comment">
                     <% if(locals.user) {%>
                         <form action="/comment/create" method="POST">
-                            <input type="text" name="comment" placeholder="Type here to add comment...">
+                            <input type="text" name="content" placeholder="Type here to add comment..." required>
                             <!--we need to send the post id where we need to add comment-->
                             <input type="hidden" name="post" value="<%= post.id %>">
                             <button type="submit" >Add comment</button>
                         </form>
                     <%}%>
+                </div>
+                <div class="post-comment-list">
+                    <ul id="post-comment-<%= post._id %>">
+                        <%for (comment of post.comments) {%>
+                        <p>
+                            <%= comment.content %>
+                            <br>
+                            <small>
+                            <%= comment.user.name%>
+                            </small>
+                        </p>
+                        <%}%>
+                    </ul>
                 </div>
                 <hr>
                 <br>
