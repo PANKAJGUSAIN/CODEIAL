@@ -40,6 +40,11 @@
 
         <ul>
             <% for (post of posts){%>
+                <%if ((locals.user) && (locals.user.id=post.user.id)){ %>
+                <small>
+                    <a href="/post/destroy/<%=post.id %>">X</a>
+                </small>
+                <%}%>
                 <li><%= post.content %></li>
                 <small><%=post.user.name %></small>
                 <br>
