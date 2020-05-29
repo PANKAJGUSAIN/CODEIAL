@@ -31,7 +31,7 @@ module.exports.destroy = function(req,res){
             })
         }
         else{
-            console.log('user is not same')
+            //console.log('user is not same')
             return res.redirect('back');
         }
     })

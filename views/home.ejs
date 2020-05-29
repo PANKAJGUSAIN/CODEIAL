@@ -40,7 +40,7 @@
 
         <ul>
             <% for (post of posts){%>
-                <%if ((locals.user) && (locals.user.id=post.user.id)){ %>
+                <%if (locals.user && locals.user.id == post.user.id) { %>
                 <small>
                     <a href="/post/destroy/<%=post.id %>">X</a>
                 </small>
@@ -61,13 +61,18 @@
                 <div class="post-comment-list">
                     <ul id="post-comment-<%= post._id %>">
                         <%for (comment of post.comments) {%>
-                        <p>
-                            <%= comment.content %>
-                            <br>
-                            <small>
-                            <%= comment.user.name%>
-                            </small>
-                        </p>
+                            <%if (locals.user && locals.user.id == comment.user.id)  { %>
+                                <small>
+                                    <a href="/comment/destroy/<%=comment.id %>">X</a>
+                                </small>
+                            <%}%>
+                            <p>
+                                <%= comment.content %>
+                                <br>
+                                <small>
+                                    <%= comment.user.name%>
+                                </small>
+                            </p>
                         <%}%>
                     </ul>
                 </div>
