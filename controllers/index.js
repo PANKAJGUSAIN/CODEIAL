@@ -1,8 +1,9 @@
 const Post =require('../models/post')
 
+const User =require('../models/user')
+
 // partials works
 module.exports.home=function(req,res){
-    //console.log('reached');
     //Post.find({},function(err,posts){
     //   return res.render('home',{
     //        posts :posts
@@ -19,8 +20,11 @@ module.exports.home=function(req,res){
         }
     })
     .exec(function(err,posts){
-          return res.render('home',{
-                posts :posts
+        User.find({},function(err,users){
+            return res.render('home',{
+                posts :posts,
+                all_users :users
             })
+        })
     })
 }

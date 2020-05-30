@@ -19,7 +19,12 @@ module.exports.login=function(req,res){
 
 module.exports.profile=function(req,res){
     //console.log('reached');
-    return res.render('profile.ejs');
+    User.findById(req.params.id,function(err,user){
+        return res.render('profile.ejs',{
+            profile_user :user
+        });
+    })
+    
 }
 
 //get the user data
