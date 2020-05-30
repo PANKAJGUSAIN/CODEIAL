@@ -20,6 +20,7 @@ module.exports.home=function(req,res){
         }
     })
     .exec(function(err,posts){
+       
         User.find({},function(err,users){
             return res.render('home',{
                 posts :posts,

@@ -1,5 +1,5 @@
 <li>
-    <%if (locals.user && locals.user.id == comment.user.id)  { %>
+    <%if (locals.user!= undefined && (locals.user.id == comment.user._id ||  locals.user.id == post.user._id))  { %>
         <small>
             <a href="/comment/destroy/<%=comment.id %>">X</a>
         </small>

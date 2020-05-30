@@ -31,11 +31,12 @@ module.exports.create =function(req,res){
 
 // to delete a comment
 module.exports.destroy=function(req,res){
-    Comment.findById(req.params.id,function(err,comment) {
-        if(comment.user == req.user.id ){
+    Comment.findById(req.params.id).populate('post').exec(function(err,comment) {
+        //console.log(comment.post);
+        if(comment.user == req.user.id || comment.post.user ==req.user.id ){
             
             // now before deleting the comment we need to fetch the id of the post and then delete the comment from there
-            let postId =comment.post
+            let postId =comment.post._id;
             comment.remove();
 
             Post.findByIdAndUpdate(postId,{$pull:{comments:req.params.id}},function(err,post) {
