@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>HOME PAGE</h1>
-    <ul>
+    <!--h1>HOME PAGE</h1-->
+    <section id="nav-bar">
+        <h1>CODIEAL
+        </h1>
+        <ul>
         <% if (locals.user){%>
             <a href="/user/profile/<%=user.id%>">
-            <li><%= user.name %></li>
+            <li><p><%= user.name %><p></li>
             </a>
             <li>
                 <a href="/user/signout">signout</a>
@@ -25,36 +29,38 @@
 
         <%}%>
     </ul>
-
-    <section id="feed-posts">
-        <%if(locals.user){%>
-        <h4>Posts</h4>
-        <form action="/post/create" method="POST" id="new-post-form">
-            <textarea name="content" cols="30" rows="3" required></textarea>
-            <input type="submit" value="Post">
-        </form>
-        <%}%>
     </section>
-    
-    <section id='post-section'>
 
-        <ul>
-            <% for (post of posts){%>
+    <div id="home-container">
+        <section id="feed-posts">
+            <h2>Daily Posts</h2>
+            <%if(locals.user){%>
+            <h4>Drop Post</h4>
+            <form action="/post/create" method="POST" id="new-post-form">
+                <textarea name="content" cols="30" rows="3" required></textarea>
+                <input type="submit" value="Post">
+            </form>
+            <%}%>
+    
+
+            
+            <ul>
+                <% for (post of posts){%>
             
                 <%- include('_post.ejs') -%>
             
+                <%}%>
+            </ul>
+
+        </section>
+
+        <section id="user-friends">
+            <h2>Friends </h2>
+            <% for(u of all_users){%>
+                <p>
+                    <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
+                </p>
             <%}%>
-        </ul>
-
-    </section>
-
-    <section id="user-friends">
-        <h4>Friends </h4>
-        <% for(u of all_users){%>
-            <p>
-                <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
-            </p>
-        <%}%>
-    </section>
+        </section>
 </body>
 </html>
