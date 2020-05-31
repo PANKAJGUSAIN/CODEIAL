@@ -7,7 +7,21 @@
 </head>
 <body>
     <h1>Profile page</h1>
-    <p><%= profile_user.name %></p>
-    <p><%= profile_user.email %></p>
+    
+
+    
+    <% if(user.id == profile_user.id) { %>
+        <!--if user matches then show the form else donot show it-->
+        <form action="/user/update/<%= profile_user.id %>" method="POST">
+            <input type="text" name="name" placeholder="your name" value="<%= profile_user.name %>" required>
+            <input type="email" name="email" placeholder="your email id" value="<%= profile_user.email %>" required>
+            <input type="submit" value="update">
+        </form>
+        
+    <% } else { %>
+            <!--else show only the profile information-->
+            <p><%= profile_user.name %></p>
+            <p><%= profile_user.email %></p>
+    <%}%>
 </body>
 </html>
