@@ -1,5 +1,7 @@
 body {
-  margin: auto; }
+  margin: auto;
+  background-color: #fff9f9;
+  color: black; }
 
 #nav-bar {
   height: 4rem;
