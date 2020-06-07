@@ -6,7 +6,7 @@ module.exports.signin=function(req,res){
     if(req.isAuthenticated()){
        return res.redirect('/user/profile')
     }
-    return res.render('sigin.ejs');
+    return res.render('login.ejs');
 }
 
 module.exports.login=function(req,res){

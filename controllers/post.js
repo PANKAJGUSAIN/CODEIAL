@@ -24,10 +24,12 @@ module.exports.post_content =async function(req,res){
                    content : req.body.content,
                     user :req.user._id
                 })
+            req.flash('success','POST PUBLISHED!');
             return res.redirect('back');
         }catch(err){
-            console.log('Error',err);
-            return
+            req.flash('error',err);
+            //console.log('Error',err);
+            return redirect('back')
 
         }
 
@@ -41,11 +43,13 @@ module.exports.destroy = function(req,res){
             post.remove();
             // now we also delete all the comments associated with it so we require the 'Comment' model
             Comment.deleteMany({post: req.params.id},function(err){
+                req.flash('success','POST ASSOCIATED COMMENTS DELETED');
                 return res.redirect('back');
             })
         }
         else{
             //console.log('user is not same')
+            req.flash('error','YOU CANNOT DELETE POST');
             return res.redirect('back');
         }
     })

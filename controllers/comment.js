@@ -14,11 +14,13 @@ module.exports.create =function(req,res){
                 user :req.user._id
             },function(err,comment){
                 if(err){
-                    console.log('error',err);
+                    req.flash('error',err);
+                    //console.log('error',err);
                 }
                 else{
                     post.comments.push(comment);
                     post.save();
+                    req.flash('success','COMMENT ADDED');
                     return res.redirect('back');
                 }
             })
@@ -40,10 +42,12 @@ module.exports.destroy=function(req,res){
             comment.remove();
 
             Post.findByIdAndUpdate(postId,{$pull:{comments:req.params.id}},function(err,post) {
+                req.flash('success','COMMENT DELETED');
                 return res.redirect('back');
             })
         }else{
-            console.log('not matched')
+            //console.log('not matched')
+            req.flash('error','YOU ARE NOT AUTHORIZED');
             return res.redirect('back');
         }
     })

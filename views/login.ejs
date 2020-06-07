@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
     <script src="https://kit.fontawesome.com/6d65aca24c.js" crossorigin="anonymous"></script>
     <title>Sign Up or Login</title>
 
@@ -62,5 +64,26 @@
 
     <!-- JS -->
     <script src="js/main.js"></script>
+    <script>
+        <% if (flash.success && flash.success.length>0) { %>
+            new Noty({
+                theme :'sunset',
+                text : "<%= flash.success %>",
+                type :'success',
+                layout :'topRight',
+                timeout :1500
+            }).show();
+        <%}%>
+
+        <% if (flash.error && flash.error.length>0) { %>
+            new Noty({
+                theme :'sunset',
+                text : "<%= flash.error %>",
+                type :'success',
+                layout :'topRight',
+                timeout :1500
+            }).show();
+        <%}%>
+    </script>
 </body>
 </html>
