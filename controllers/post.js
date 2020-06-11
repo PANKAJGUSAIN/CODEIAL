@@ -53,6 +53,16 @@ module.exports.destroy = function(req,res){
             post.remove();
             // now we also delete all the comments associated with it so we require the 'Comment' model
             Comment.deleteMany({post: req.params.id},function(err){
+
+                if(req.xhr){
+                    return res.status(200).json({
+                        data :{
+                            post_id :req.params.id
+                        },
+                        message :"POST DELETED SUCCESSFULLY"
+                    });
+                }
+                
                 req.flash('success','POST ASSOCIATED COMMENTS DELETED');
                 return res.redirect('back');
             })
@@ -63,8 +73,6 @@ module.exports.destroy = function(req,res){
             return res.redirect('back');
         }
     })
-
-
 }
 
  // to delete a post and comments associated with it  but this time using async wait method
