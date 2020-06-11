@@ -27,6 +27,7 @@ module.exports.post_content =async function(req,res){
                 })
 
             if(req.xhr){
+                post = await post.populate('user','name').execPopulate();
                 return res.status(200).json({
                     data:{
                         post :post
@@ -39,10 +40,9 @@ module.exports.post_content =async function(req,res){
         }catch(err){
             req.flash('error',err);
             //console.log('Error',err);
-            return redirect('back')
+            return redirect('back');
 
         }
-
 }
 
 // to delete a post and comments associated with it
@@ -63,7 +63,7 @@ module.exports.destroy = function(req,res){
                     });
                 }
                 
-                req.flash('success','POST ASSOCIATED COMMENTS DELETED');
+                req.flash('success','POST AND ASSOCIATED COMMENTS DELETED');
                 return res.redirect('back');
             })
         }
