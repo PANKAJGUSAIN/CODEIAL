@@ -18,6 +18,18 @@ module.exports.create =function(req,res){
                     //console.log('error',err);
                 }
                 else{
+
+                    if (req.xhr){
+                        // Similar for comments to fetch the user's id!
+                        comment.populate('user', 'name').execPopulate();
+                        return res.status(200).json({
+                            data: {
+                                comment: comment
+                            },
+                            message: "Post created!"
+                        });
+                    }
+        
                     post.comments.push(comment);
                     post.save();
                     req.flash('success','COMMENT ADDED');
@@ -42,7 +54,18 @@ module.exports.destroy=function(req,res){
             comment.remove();
 
             Post.findByIdAndUpdate(postId,{$pull:{comments:req.params.id}},function(err,post) {
+
+                if (req.xhr){
+                    return res.status(200).json({
+                        data: {
+                            comment_id: req.params.id
+                        },
+                        message: "Post deleted"
+                    });
+                }
+    
                 req.flash('success','COMMENT DELETED');
+
                 return res.redirect('back');
             })
         }else{

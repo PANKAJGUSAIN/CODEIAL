@@ -12,9 +12,9 @@
                 let newPost =newPostDOM(data.data.post);
                 $('#posts-lists-container > ul').prepend(newPost);
                 deletePost($(' .delete-post-button', newPost));
-                
+                // PostComments(data.data.post._id);
                 new Noty({
-                    theme :'relax',
+                    theme :'sunset',
                     text :"POST PUBLISHED",
                     type :'success',
                     layout :'topRight',
@@ -70,7 +70,7 @@
                     $(`#post-${data.data.post_id}`).remove();
                     
                     new Noty({
-                        theme: 'relax',
+                        theme: 'sunset',
                         text: "Post Deleted",
                         type: 'success',
                         layout: 'topRight',
@@ -85,6 +85,8 @@
             });
         }));
     }
+
+
 
 
     createPost();

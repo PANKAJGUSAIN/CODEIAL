@@ -9,7 +9,7 @@
         <%=post.user.name %>
     </small>
     <br>
-    <div class="post-comment">
+    <div class="post-comment" id="post-<%=post._id%>-comments-form">
         <% if(locals.user) {%>
             <form action="/comment/create" method="POST">
                 <input type="text" name="content" placeholder="Type here to add comment..." required>
