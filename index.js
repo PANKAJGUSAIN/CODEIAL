@@ -33,6 +33,8 @@ app.use(cookieParser());
 //acces static files
 app.use(express.static('./assests'));
 
+//make the uploads path avaliable to the browser
+app.use('/uploads',express.static(__dirname+'/uploads'));
 
 
 //set up the view engine

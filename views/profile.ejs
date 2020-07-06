@@ -7,14 +7,14 @@
 </head>
 <body>
     <h1>Profile page</h1>
-    
-
+    <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
     
     <% if(user.id == profile_user.id) { %>
         <!--if user matches then show the form else donot show it-->
-        <form action="/user/update/<%= profile_user.id %>" method="POST">
+        <form action="/user/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
             <input type="text" name="name" placeholder="your name" value="<%= profile_user.name %>" required>
             <input type="email" name="email" placeholder="your email id" value="<%= profile_user.email %>" required>
+            <input type="file" name="avatar" placeholder="profile picture" >
             <input type="submit" value="update">
         </form>
         

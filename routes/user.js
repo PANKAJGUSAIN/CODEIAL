@@ -22,7 +22,7 @@ router.post('/create',homeController.create);
 //to check session
 router.post('/create-session', passport.authenticate(
     'local',
-    {failureRedirect: '/user/sigin'},
+    {failureRedirect: '/user/login'},
 ), homeController.createSession);
 
 

@@ -1,10 +1,12 @@
 const User = require('../models/user');
+const fs   = require('fs');
+const path =require('path');
 
 
 module.exports.signin=function(req,res){
     //console.log('reached');
     if(req.isAuthenticated()){
-       return res.redirect('/user/profile')
+       return res.redirect('/user/profile');
     }
     return res.render('sigin.ejs');
 }
@@ -12,7 +14,7 @@ module.exports.signin=function(req,res){
 module.exports.login=function(req,res){
     //console.log('reached');
     if(req.isAuthenticated()){
-      return  res.redirect('/user/profile')
+      return  res.redirect('/user/profile');
     }
     return res.render('login.ejs');
 }
@@ -28,14 +30,62 @@ module.exports.profile=function(req,res){
 }
 
 // to update user profile
-module.exports.update=function(req,res){
+module.exports.update=async function(req,res){
+    //normal code
+
+    //if(req.user.id ==req.params.id){
+    //    User.findByIdAndUpdate(req.params.id,{name:req.body.name ,email:req.body.email},function(err,user){
+    //        req.flash('success','UPDATED!');
+    //        return res.redirect('back');
+    //    })
+    //}
+    //else{
+    //    req.flash('error','Unauthorized');
+    //    return res.status(401).send('Unauthorized');
+    //}
+
+    //aysnc code
+
     if(req.user.id ==req.params.id){
-        User.findByIdAndUpdate(req.params.id,{name:req.body.name ,email:req.body.email},function(err,user){
-            return res.redirect('back');
-        })
-    }
-    else{
+
+        try{
+            let user=await User.findById(req.params.id);
+            User.uploadedAvatar(req,res,function(err){
+                if(err){
+                    console.log('*****multer error',err);
+                }
+                // console.log(req.file);
+
+                user.name =req.body.name;
+                user.email = req.body.email;
+
+                //not everytime user is going to put its avatar so we will put a check 
+                if(req.file){
+
+                    if(user.avatar){
+                        fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+
+                    }
+
+
+                    //this is saving the path of the uploaded file into the avatar field in the user
+                    user.avatar =User.avatarPath+'/'+req.file.filename;
+                }
+
+                user.save();
+                //req.flash('success','POST PUBLISHED!');
+                return res.redirect('back');
+            })
+
+        }catch(err){
+            req.flash('error',err);
+            return redirect('back');
+        }
+
+    }else{
+        req.flash('error','Unauthorized');
         return res.status(401).send('Unauthorized');
+
     }
 }
 
