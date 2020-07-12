@@ -2,6 +2,8 @@ const Post =require('../models/post')
 
 const Comment =require('../models/comment');
 
+const commentsMailer =require('../mailers/posts_mailer');
+
 
 //to add post or comment in the database
 module.exports.post_content =async function(req,res){
@@ -26,8 +28,12 @@ module.exports.post_content =async function(req,res){
                     user :req.user._id
                 })
 
+                post = await post.populate('user','name email').execPopulate();
+                commentsMailer.newPost(post);
+
+
             if(req.xhr){
-                post = await post.populate('user','name').execPopulate();
+                //post = await post.populate('user','name').execPopulate();
                 return res.status(200).json({
                     data:{
                         post :post
