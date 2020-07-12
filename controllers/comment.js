@@ -5,50 +5,54 @@ const commentsMailer =require('../mailers/comments_mailer');
 
 
 //to add post or comment in the database
-module.exports.pix=function(req,res){
-    //console.log(req.body)
-    //console.log(req.user._id)
-    Post.findById(req.body.post,function(err,post){
-        if(post){
-            Comment.create({
-                content :req.body.content,
-                post :req.body.post,
-                user :req.user._id
-            },function(err,comment){
-                if(err){
-                    req.flash('error',err);
-                    //console.log('error',err);
-                }
-                else{
-                    
-                    comment.populate('user', 'name email').execPopulate();
-                    console.log("*************************");
-                    console.log(comment);
-                    console.log('************************');
-                    commentsMailer.newComment(comment);
-                    if (req.xhr){
-                        // Similar for comments to fetch the user's id!
-                           //comment.populate('user', 'name').execPopulate();
-                       return res.status(200).json({
-                            data: {
-                                comment: comment
-                            },
-                            message: "Post created!"
-                        });
-                    }
+//this code won't work while sending out emails as we need async await function here sometime mailer is called even before the comment creation is complete.
+//so we need async await
+// module.exports.cr=function(req,res){
+//     //console.log(req.body)
+//     //console.log(req.user._id)
+//     Post.findById(req.body.post,function(err,post){
+//         if(post){
+//             Comment.create({
+//                 content :req.body.content,
+//                 post :req.body.post,
+//                 user :req.user._id
+//             },function(err,comment){
+//                 if(err){
+//                     req.flash('error',err);
+//                     return;
+//                     //console.log('error',err);
+//                 }
+//                     post.comments.push(comment);     
+//                     haan actually async mae hai merpe
+//                     post.save();
+//                     comment.populate('user').execPopulate();
+//                     console.log("*************************");
+//                     console.log("MAIL",comment.user);
+//                     console.log('************************');
+//                     commentsMailer.newComment(comment);
+//                     if (req.xhr){
+//                         // Similar for comments to fetch the user's id!
+//                            //comment.populate('user', 'name').execPopulate();
+//                        return res.status(200).json({
+//                             data: {
+//                                 comment: comment
+//                             },
+//                             message: "Post created!"
+//                         });
+//                     }
         
-                    post.comments.push(comment);
-                    post.save();
-                    req.flash('success','COMMENT ADDED');
-                   return res.redirect('back');
-                }
-            })
-        }
-        else{
-            res.redirect('back');
-        }
-    })
-}
+                    
+//                     req.flash('success','COMMENT ADDED');
+//                    return res.redirect('back');
+                
+//             })
+//         }
+//         else{
+//             res.redirect('back');
+//         }
+//     })
+// }
+
 
 //create comment using sync await
 module.exports.create = async function(req, res){

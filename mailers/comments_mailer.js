@@ -11,15 +11,13 @@ const nodeMailer =require('../config/nodemailer');
     //new way
 
     exports.newComment =(comment)=>{
-        console.log('inside newComment mailer',comment);
         //adding template
         let htmlString =nodeMailer.renderTemplate({comment:comment},'/comments/new_comment.ejs');
-        //
         nodeMailer.transporter.sendMail({
-            from :'gusainpankaj1999@gmail.com', //dummy MAIL
+            from :'codeial001@gmail.com', //dummy MAIL 
             to : comment.user.email,
             subject :"New Comment",
-            html :htmlString  //'<h1>Yup, your comment is now published!</h1>'
+            html :htmlString  //'<h1>Yup, your comment is now published!</h1>' //
         },(err,info)=>{
             if(err){console.log('error in sending mail',err); return };
 
