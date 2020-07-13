@@ -2,7 +2,12 @@ const Post =require('../models/post')
 
 const Comment =require('../models/comment');
 
-const commentsMailer =require('../mailers/posts_mailer');
+const postsMailer =require('../mailers/posts_mailer');
+
+const postsEmailWorker =require('../workers/post_email_worker');
+
+const queue =require('../config/kue');
+
 
 
 //to add post or comment in the database
@@ -29,7 +34,15 @@ module.exports.post_content =async function(req,res){
                 })
 
                 post = await post.populate('user','name email').execPopulate();
-                commentsMailer.newPost(post);
+                //postssMailer.newPost(post);
+                //creating a job(task)
+                let postjob = queue.create('post_emails',post).save(function(err){
+                    if(err){
+                        console.log('error in sending to the queue',err);
+                    }
+                    console.log('job enqueued',postjob.id);
+                })
+                
 
 
             if(req.xhr){

@@ -2,6 +2,10 @@ const Comment =require('../models/comment')
 const Post =require('../models/post')
 
 const commentsMailer =require('../mailers/comments_mailer');
+//importing worker
+const commentEmailWorker =require('../workers/comment_email_worker');
+
+const queue = require('../config/Kue');
 
 
 //to add post or comment in the database
@@ -71,7 +75,14 @@ module.exports.create = async function(req, res){
             post.save();
             
             comment = await comment.populate('user', 'name email').execPopulate();
-            commentsMailer.newComment(comment);
+            //this line is shifted to kue for delayjobs
+            //commentsMailer.newComment(comment);
+            let job = queue.create('emails',comment).save(function(err){
+                if(err){
+                    console.log('error in sending to the queue',err);
+                }
+                console.log('job enqueued',job.id);
+            })
             if (req.xhr){
                 
     
