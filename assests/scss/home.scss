@@ -1,12 +1,12 @@
 body{
     margin: auto;
-    background-color:rgb(255, 249, 249);
+    background-image: radial-gradient(rgb(201, 237, 248),#ffffff);
     color: black;
 }
 #nav-bar{
     height:4rem;
     color: whitesmoke;
-    background-image: linear-gradient(rgba(238, 113, 113, 0.856),orange);
+    background-image: linear-gradient(rgba(152, 6, 182, 0.856),rgb(77, 144, 243));
     display: flex;
     justify-content: space-between;
     border-radius:15px;
@@ -18,9 +18,8 @@ body{
         margin-left:20px;
     }
     ul{
-        list-style: none;
         align-items: right;
-        li{
+        li{ 
             display: inline-block;
             a{
                 text-decoration: none;
@@ -36,8 +35,23 @@ body{
     h2{
         text-align:center;
     }
+    #user-blogs{
+        width:20%;
+        border-right:1px solid lightgrey;
+
+        #blog-podcast{
+            text-align: center;
+            margin-top:10px;
+            height:5rem;
+            width:90%;
+            margin:auto;
+            background-color: rgb(240, 234, 234);
+            border:1px solid white;
+            border-radius:10px;
+        }
+    }
     #feed-posts{
-        width: 70%;
+        width: 60%;
         padding: 10px;
         border-right:1px solid lightgrey;
         height: 100%;
@@ -47,12 +61,20 @@ body{
         form{
             padding-left: 20px;
         }
-        
     }
     
     #user-friends{
-        left:75%;
-        width: 30%;
+        width: 10%;
         padding-left: 20px;
     }
+
+    
 }
+
+footer{
+    height:4rem;
+    background-color:rgb(209, 205, 205);
+    text-align: center;
+    padding-top:20px;
+}
+

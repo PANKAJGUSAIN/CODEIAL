@@ -34,6 +34,22 @@
     </ul>
     </section>
     <div id="home-container">
+        
+        <section id="user-blogs">
+            <h2>Blog Shot</h2>
+            <div id="blog-podcast">
+                <p><h3>BLOG!</h3></p>
+            </div>
+
+            <div id="blog-podcast">
+                <p> <h3> BLOG!</h3></p>
+            </div>
+
+            <div id="blog-podcast">
+                <p> <h3>BLOG! </h3></p>
+            </div>
+        </section>
+
         <section id="feed-posts">
             <h2>Daily Posts</h2>
             <%if(locals.user){%>
@@ -46,7 +62,7 @@
     
 
             <div id="posts-lists-container">
-            <ul>
+            <ul type="none">
                 <% for (post of posts){%>
             
                 <%- include('_post.ejs') -%>
@@ -54,7 +70,8 @@
                 <%}%>
             </ul>
             </div>
-
+<!-- kab se huaaa abhi todhi dher phle kal raat ko sahi work kar raha tha .  abhi kya kya add kiya ?
+abhi like ka model route and controller -->
         </section>
 
         <section id="user-friends">
@@ -65,7 +82,13 @@
                 </p>
             <%}%>
         </section>
-    
+
+    </div>
+    <footer>
+        <div>
+            <p><b>CREATED AND DEVELPED BY PANKAJ GUSAIN</b></p>
+        </div>
+    </footer>
     
     <script>
         <% if (flash.success && flash.success.length>0) { %>
@@ -93,5 +116,6 @@
 
 <script src="/js/home_posts.js"></script>
 <script src="/js/home_posts_comment.js"></script>
+<script src="/js/likes.js"></script>
 </body>
 </html>
