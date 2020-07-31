@@ -43,7 +43,7 @@ module.exports.home= async function(req,res){
                 populate:{
                     path :'user'
                 }
-            });
+            }).populate('likes');
 
         let users=await User.find({});
             

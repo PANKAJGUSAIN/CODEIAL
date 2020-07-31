@@ -8,6 +8,8 @@ const postsEmailWorker =require('../workers/post_email_worker');
 
 const queue =require('../config/kue');
 
+const Like =require('../models/like');
+
 
 
 //to add post or comment in the database
@@ -72,6 +74,9 @@ module.exports.destroy = function(req,res){
             post.remove();
             // now we also delete all the comments associated with it so we require the 'Comment' model
             Comment.deleteMany({post: req.params.id},function(err){
+                // CHANGE :: delete the associated likes for the post and all its comments' likes too
+            Like.deleteMany({likeable: post, onModel: 'Post'});
+            Like.deleteMany({_id: {$in: post.comments}});
 
                 if(req.xhr){
                     return res.status(200).json({

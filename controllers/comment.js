@@ -120,7 +120,8 @@ module.exports.destroy=function(req,res){
             comment.remove();
 
             Post.findByIdAndUpdate(postId,{$pull:{comments:req.params.id}},function(err,post) {
-
+                //CHANGE :: destroy the associated likes for this comment
+                Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
                 if (req.xhr){
                     return res.status(200).json({
                         data: {

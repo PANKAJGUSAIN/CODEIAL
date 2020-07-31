@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6d65aca24c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
     <title>CODIEAL</title>
 </head>
@@ -17,10 +18,11 @@
         <ul>
         <% if (locals.user){%>
             <a href="/user/profile/<%=user.id%>">
-            <li><p><%= user.name %><p></li>
+            <li><p style="color: white;"><%= user.name %><p></li>
             </a>
             <li>
                 <a href="/user/signout">signout</a>
+                
             </li>
         <%} else {%>
             <li>
@@ -36,6 +38,7 @@
     <div id="home-container">
         
         <section id="user-blogs">
+            <div id="blog_section">
             <h2>Blog Shot</h2>
             <div id="blog-podcast">
                 <p><h3>BLOG!</h3></p>
@@ -54,8 +57,8 @@
             <h2>Daily Posts</h2>
             <%if(locals.user){%>
             <h4>Drop Post</h4>
-            <form action="/post/create" method="POST" id="new-post-form">
-                <textarea name="content" cols="30" rows="3" required></textarea>
+            <form action="/post/create" method="POST" id="new-post-form" >
+                <textarea name="content" cols="40" rows="6" required></textarea>
                 <input type="submit" value="Post">
             </form>
             <%}%>
@@ -70,17 +73,17 @@
                 <%}%>
             </ul>
             </div>
-<!-- kab se huaaa abhi todhi dher phle kal raat ko sahi work kar raha tha .  abhi kya kya add kiya ?
-abhi like ka model route and controller -->
         </section>
 
         <section id="user-friends">
+            <div id="blog_section">
             <h2>Friends </h2>
             <% for(u of all_users){%>
                 <p>
                     <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
                 </p>
             <%}%>
+            </div>
         </section>
 
     </div>
@@ -116,6 +119,14 @@ abhi like ka model route and controller -->
 
 <script src="/js/home_posts.js"></script>
 <script src="/js/home_posts_comment.js"></script>
-<script src="/js/likes.js"></script>
+
+<!-- CHANGE :: import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
+<script src="js/toggle_likes.js"></script>
+<script>
+    $('.toggle-like-button').each(function(){
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+</script>
 </body>
 </html>
