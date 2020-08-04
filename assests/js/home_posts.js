@@ -12,7 +12,7 @@
                 let newPost =newPostDOM(data.data.post);
                 $('#posts-lists-container > ul').prepend(newPost);
                 deletePost($(' .delete-post-button', newPost));
-                new PostComments(data.data.post._id);
+                //new PostComments(data.data.post._id);
                 // CHANGE :: enable the functionality of the toggle like button on the new post
                 new ToggleLike($(' .toggle-like-button', newPost));
                 new Noty({

@@ -1,0 +1,27 @@
+<%if(locals.user){%>
+    <div id="user-chat-box">
+        <div id="user-chat-header">
+            <span>Global Chat <i class="fas fa-circle dot"></i></span>
+
+            <span><i class="fas fa-minus-circle"></i></span>
+        </div>
+        <ul id="chat-message-list">
+            <li class="other-message">
+                <span>Other message</span>
+            </li>
+            <li class="self-message">
+                <span>self message</span>
+            </li>
+        </ul>
+        
+        <div id="chat-message-input-container" >
+            <input type="text" id="chat-message-input" placeholder="Type message...." required>
+            <button id="send-message">Send <i class="fas fa-paper-plane"></i></button>
+        </div>
+
+    </div>
+
+
+
+
+<%}%>

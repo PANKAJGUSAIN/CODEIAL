@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6d65aca24c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/chat_box.css">
     <title>CODIEAL</title>
 </head>
 <body>
@@ -58,7 +59,7 @@
             <%if(locals.user){%>
             <h4>Drop Post</h4>
             <form action="/post/create" method="POST" id="new-post-form" >
-                <textarea name="content" cols="40" rows="6" required></textarea>
+                <textarea name="content" cols="30" rows="4" required></textarea>
                 <input type="submit" value="Post">
             </form>
             <%}%>
@@ -76,16 +77,18 @@
         </section>
 
         <section id="user-friends">
-            <div id="blog_section">
+            <!--div id="blog_section"-->
             <h2>Friends </h2>
             <% for(u of all_users){%>
                 <p>
                     <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
                 </p>
             <%}%>
-            </div>
+            <!--/div-->
         </section>
-
+        <section id="chat box">
+        <%- include('_chat_box.ejs') -%>
+        </section>
     </div>
     <footer>
         <div>
@@ -121,12 +124,19 @@
 <script src="/js/home_posts_comment.js"></script>
 
 <!-- CHANGE :: import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
-<script src="js/toggle_likes.js"></script>
+<script src="/js/toggle_likes.js"></script>
 <script>
     $('.toggle-like-button').each(function(){
         let self = this;
         let toggleLike = new ToggleLike(self);
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+<% if (locals.user) { %>
+    <script>
+    new ChatEngine('user-chat-box','<%= locals.user.email %>');
+    </script>
+<%}%>
 </body>
 </html>

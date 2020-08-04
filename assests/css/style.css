@@ -67,8 +67,8 @@ h2 {
   font-size: 36px; }
 
 .main {
-  background-image:url('/images/black.jpg');
-  background-size: cover;
+  /*background-image:url('/images/form_background.jpg');*/
+  background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 150px 0; }
