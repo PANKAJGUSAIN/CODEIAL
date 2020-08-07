@@ -1,5 +1,6 @@
 const User =require('../../../models/user');
 const jwt  =require('jsonwebtoken');
+const env=require('../../../config/environment');
 
 //whenever a user name and password is recieved we need to find that user and generate the 
 //jsonwebtoken corresponds to it.
@@ -19,7 +20,7 @@ module.exports.createSession= async function(req, res){
         return res.json(200,{
             message:"sign in successfull , here is your token",
             data :{
-                token :jwt.sign(user.toJSON(),'CODIEAL',{expiresIn :100000})
+                token :jwt.sign(user.toJSON(),env.jwt_secret,{expiresIn :100000})
             }
         })
     }

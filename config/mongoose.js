@@ -1,7 +1,10 @@
 // to access mongoose
 const mongoose = require('mongoose');
+//using environment.js to keep all keywords in one place
+//const env =require('./environment');
+const env = require('./environment');
 //to connect it
-mongoose.connect('mongodb://localhost/codeial_development');
+mongoose.connect(`mongodb://localhost/${env.db}`);
 //db connection
 const db =mongoose.connection;
 
