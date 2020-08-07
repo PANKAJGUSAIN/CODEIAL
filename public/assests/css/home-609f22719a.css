@@ -1,0 +1,89 @@
+body {
+  margin: auto;
+  background-color: #fffbfb;
+  color: black; }
+  body input[type=text]:hover {
+    border: 2px solid black; }
+  body textarea {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body textarea:hover {
+      border: 2px solid #f88b64; }
+
+#nav-bar {
+  height: 4rem;
+  background-image: linear-gradient(black, #363636);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  padding: 2px;
+  margin-bottom: 25px; }
+  #nav-bar h1 {
+    color: whitesmoke;
+    margin-left: 20px; }
+  #nav-bar ul {
+    align-items: right; }
+    #nav-bar ul li {
+      display: inline-block; }
+      #nav-bar ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding-left: 10px; }
+        #nav-bar ul li a p {
+          text-decoration: none;
+          color: white; }
+
+#home-container {
+  display: flex; }
+  #home-container h2 {
+    text-align: center; }
+  #home-container #blog_section {
+    position: sticky;
+    top: 2%; }
+  #home-container #user-blogs {
+    width: 20%;
+    border-right: 1px solid black; }
+    #home-container #user-blogs #blog-podcast {
+      text-align: center;
+      margin-top: 10px;
+      height: 5rem;
+      width: 90%;
+      margin: auto;
+      background-color: #f0eaea;
+      border: 1px solid white;
+      border-radius: 10px; }
+  #home-container #feed-posts {
+    width: 60%;
+    padding: 10px;
+    border-right: 1px solid #020202;
+    height: 100%; }
+    #home-container #feed-posts h4 {
+      padding-left: 20px; }
+    #home-container #feed-posts form {
+      padding-left: 20px; }
+    #home-container #feed-posts #user_post {
+      height: 5rem;
+      width: 95%;
+      padding-left: 10px;
+      display: flex;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 10px; }
+      #home-container #feed-posts #user_post:hover {
+        padding-left: 10px;
+        border: 2px solid orange; }
+  #home-container #user-friends {
+    width: 10%;
+    padding-left: 20px; }
+
+footer {
+  height: 4rem;
+  background-color: #d1cdcd;
+  text-align: center;
+  padding-top: 20px; }
