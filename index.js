@@ -44,12 +44,16 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 //acces static files
-app.use(express.static('env.asset_path'));
+app.use(express.static(env.asset_path));
 
 //make the uploads path avaliable to the browser
 app.use('/uploads',express.static(__dirname+'/uploads'));
 
+//logger(Production log)
 app.use(logger(env.morgan.mode , env.morgan.options));
+
+//helper
+require('./config/view-helpers')(app);
 
 //set up the view engine
 app.set('view engine','ejs');

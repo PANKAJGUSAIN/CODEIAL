@@ -1,21 +1,386 @@
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /js/home_post_comment.js HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:21 +0000] "GET /favicon.ico HTTP/1.1" - - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:23 +0000] "GET /user/profile/5f2bed526895f849f87fdf91 HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/home_post_comment.js HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/home_post_comment.js HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:47 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
-::1 - - [07/Aug/2020:17:38:52 +0000] "GET /likes/toggle/?id=5f2d30c17ef991060c229157&type=Post HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /user/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:04 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:11 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:22 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:31:36 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [08/Aug/2020:18:32:55 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:02 +0000] "GET / HTTP/1.1" 200 3798 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:02 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:02 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:03 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:03 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:03 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:03 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:03 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:03 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:04 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:04 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:04 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:04 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:04 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [09/Aug/2020:08:27:18 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:00 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:01 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:01 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:01 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:01 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:01 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:01 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:12 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:29:13 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /css/home-609f22719a.css HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /css/chat_box-03c35d8593.css HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/home_posts-b00674d1ac.js HTTP/1.1" 404 166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/home_post_comment-a84f677b90.js HTTP/1.1" 404 173 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:05:31:35 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+[0mGET / [32m200[0m 199.165 ms - 35207[0m
+[0mGET /js/home_posts.js [33m404[0m 10.049 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 8.508 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 10.668 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 14.742 ms - 156[0m
+[0mGET /js/home_posts.js [33m404[0m 2.934 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 2.008 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 2.226 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 2.817 ms - 156[0m
+[0mGET / [36m304[0m 108.695 ms - -[0m
+[0mGET /js/home_posts.js [33m404[0m 25.089 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 26.379 ms - 162[0m
+[0mGET /js/chat_engine.js [33m404[0m 30.375 ms - 156[0m
+[0mGET /js/toggle_likes.js [33m404[0m 32.604 ms - 157[0m
+[0mGET /js/home_posts.js [33m404[0m 1.976 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 5.757 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 1.659 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 2.021 ms - 156[0m
+[0mGET / [36m304[0m 96.249 ms - -[0m
+[0mGET /js/home_posts.js [33m404[0m 6.901 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 7.441 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 10.862 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 11.097 ms - 156[0m
+[0mGET /css/home.css [33m404[0m 5.600 ms - 151[0m
+[0mGET /css/chat_box.css [33m404[0m 6.852 ms - 155[0m
+[0mGET /js/home_posts.js [33m404[0m 2.162 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 3.846 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 2.042 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 1.580 ms - 156[0m
+[0mGET /css/home.css [33m404[0m 1.826 ms - 151[0m
+[0mGET /css/home.css [33m404[0m 3.868 ms - 151[0m
+[0mGET /user/login [36m304[0m 27.530 ms - -[0m
+[0mGET /user/js/main.js [33m404[0m 2.529 ms - 154[0m
+[0mGET /images/signin-image.webp [33m404[0m 1.285 ms - 163[0m
+[0mGET /user/auth/google [36m302[0m 11.558 ms - 0[0m
+[0mGET /user/auth/google/callback?code=4%2F2wFW_OSZEHRGQ4EDCVwiSm-MvIYW2EeZ_y_RcQxtYNQl6-w3mEP7Omu5uixiH6XquG6GMtaQzow9qDIb0_ceVuQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=2&prompt=consent [36m302[0m 643.912 ms - 46[0m
+[0mGET / [32m200[0m 102.110 ms - 60185[0m
+[0mGET /js/home_post_comment.js [33m404[0m 30.991 ms - 162[0m
+[0mGET /js/home_posts.js [33m404[0m 38.099 ms - 155[0m
+[0mGET /js/toggle_likes.js [33m404[0m 37.951 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 37.551 ms - 156[0m
+[0mGET /css/chat_box.css [33m404[0m 28.332 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 29.819 ms - 151[0m
+[0mGET /js/home_posts.js [33m404[0m 2.495 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 3.346 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 3.015 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 4.043 ms - 156[0m
+[0mGET / [32m200[0m 69.907 ms - 59941[0m
+[0mGET /js/home_posts.js [33m404[0m 21.035 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 22.729 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 17.587 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 16.356 ms - 156[0m
+[0mGET /css/chat_box.css [33m404[0m 13.435 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 15.076 ms - 151[0m
+[0mGET /css/home.css [33m404[0m 3.126 ms - 151[0m
+[0mGET /css/chat_box.css [33m404[0m 3.413 ms - 155[0m
+[0mGET /js/home_posts.js [33m404[0m 3.851 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 4.879 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 2.497 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 4.883 ms - 156[0m
+[0mGET / [36m304[0m 109.145 ms - -[0m
+[0mGET /js/home_posts.js [33m404[0m 53.702 ms - 155[0m
+[0mGET /js/chat_engine.js [33m404[0m 48.436 ms - 156[0m
+[0mGET /js/home_post_comment.js [33m404[0m 53.368 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 54.454 ms - 157[0m
+[0mGET /js/home_posts.js [33m404[0m 3.060 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 3.152 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 3.560 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 8.267 ms - 156[0m
+[0mGET /likes/toggle/?id=5f2da64da150fb486cc048ea&type=Post [33m404[0m 8.301 ms - 152[0m
+[0mGET /js/home_posts.js [33m404[0m 27.774 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 28.058 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 27.507 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 10.818 ms - 156[0m
+[0mGET /js/home_posts.js [33m404[0m 8.027 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 4.326 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 4.961 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 5.940 ms - 156[0m
+[0mGET / [36m304[0m 131.004 ms - -[0m
+[0mGET /js/home_posts.js [33m404[0m 43.807 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 45.087 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 64.507 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 45.578 ms - 156[0m
+[0mGET /js/home_posts.js [33m404[0m 5.584 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 3.197 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 3.719 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 4.219 ms - 156[0m
+[0mGET / [32m200[0m 84.490 ms - 35207[0m
+[0mGET /js/home_posts.js [33m404[0m 7.811 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 7.079 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 9.283 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 9.382 ms - 156[0m
+[0mGET /css/chat_box.css [33m404[0m 9.170 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 5.384 ms - 151[0m
+[0mGET /css/chat_box.css [33m404[0m 3.317 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 3.284 ms - 151[0m
+[0mGET /js/home_posts.js [33m404[0m 1.924 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 2.401 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 1.855 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 2.949 ms - 156[0m
+[0mGET /favicon.ico [33m404[0m 1.750 ms - 150[0m
+[0mGET /css/chat_box.css [33m404[0m 2.157 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 2.509 ms - 151[0m
+[0mGET / [36m304[0m 78.983 ms - -[0m
+[0mGET /js/chat_engine.js [33m404[0m 10.215 ms - 156[0m
+[0mGET /js/home_posts.js [33m404[0m 10.082 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 10.127 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 5.362 ms - 157[0m
+[0mGET /css/chat_box.css [33m404[0m 7.616 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 6.949 ms - 151[0m
+[0mGET /js/home_posts.js [33m404[0m 3.857 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 3.591 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 3.056 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 3.515 ms - 156[0m
+[0mGET / [32m200[0m 98.248 ms - 35175[0m
+[0mGET /css/home.css [33m404[0m 22.786 ms - 151[0m
+[0mGET /js/home_posts.js [33m404[0m 8.350 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 9.155 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 10.873 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 10.039 ms - 156[0m
+[0mGET /css/chat_box.css [33m404[0m 6.703 ms - 155[0m
+[0mGET /css/chat_box.css [33m404[0m 5.936 ms - 155[0m
+[0mGET /css/home.css [33m404[0m 5.635 ms - 151[0m
+[0mGET /js/home_posts.js [33m404[0m 4.724 ms - 155[0m
+[0mGET /js/home_post_comment.js [33m404[0m 3.569 ms - 162[0m
+[0mGET /js/toggle_likes.js [33m404[0m 4.269 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404[0m 3.723 ms - 156[0m
+[0mGET /css/chat_box.css [33m404[0m 0.917 ms - 155[0m
+[0mGET / [32m200[0m 179.675 ms - 35175[0m
+[0mGET /user/login [32m200[0m 22.441 ms - 3032[0m
+[0mGET /user/js/main.js [33m404[0m 9.380 ms - 154[0m
+[0mGET /images/signin-image.webp [33m404[0m 3.776 ms - 163[0m
+[0mGET /user/auth/google [36m302[0m 23.810 ms - 0[0m
+[0mGET /user/auth/google/callback?code=4%2F2wHewOaPwgVkDkqpofnAEXs4lotGC9t6z0iVaoIrNEcm2rPM6DvMZXoehpcYcE2L4RZjJZSLTAogUOpcTq6_I1A&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 705.492 ms - 46[0m
+[0mGET / [32m200[0m 130.355 ms - 60153[0m
+[0mPOST /likes/toggle/?id=5f2d3694107c8025ecf9ad41&type=Post [32m200[0m 76.155 ms - 58[0m
+[0mGET / [32m200[0m 117.623 ms - 59909[0m
+::1 - - [10/Aug/2020:06:06:30 +0000] "GET / HTTP/1.1" 200 3766 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+::1 - - [10/Aug/2020:06:06:30 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+::1 - - [10/Aug/2020:06:06:30 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+::1 - - [10/Aug/2020:06:06:30 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+::1 - - [10/Aug/2020:06:06:30 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+::1 - - [10/Aug/2020:06:08:18 +0000] "GET / HTTP/1.1" 200 3788 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+::1 - - [10/Aug/2020:06:15:05 +0000] "GET / HTTP/1.1" 200 3788 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:38 +0000] "GET /user/auth/google HTTP/1.1" 302 0 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "POST /user/create-session HTTP/1.1" 302 66 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /user/login HTTP/1.1" 200 3279 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /css/style.css HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /css/style.css HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:50 +0000] "GET /favicon.ico HTTP/1.1" - - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:51 +0000] "GET /css/style.css HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:51 +0000] "GET /css/style.css HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:51 +0000] "GET /css/style.css HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:17:51 +0000] "GET /css/style.css HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:29 +0000] "GET / HTTP/1.1" 200 3788 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:34 +0000] "GET /user/profile/5f2bed526895f849f87fdf91 HTTP/1.1" 302 66 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:34 +0000] "GET /user/sigin HTTP/1.1" 200 2564 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:34 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:34 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:34 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:34 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:36 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:36 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:36 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:36 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:36 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:43 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:43 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:43 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:44 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:44 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:45 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:45 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:45 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:45 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:45 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:51 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:51 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:51 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:51 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:51 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:52 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:52 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:52 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:52 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:20:52 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:21:58 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:21:59 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:21:59 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:21:59 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:21:59 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:22:02 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:22:21 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:22:25 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:22:25 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:22:25 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:22:25 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+[0mGET /user/sigin [36m304[0m 15.986 ms - -[0m
+[0mGET /images/signup-image.webp [33m404[0m 11.186 ms - 163[0m
+[0mGET /user/sigin [36m304[0m 3.779 ms - -[0m
+[0mGET /images/signup-image.webp [33m404[0m 2.644 ms - 163[0m
+[0mGET /images/signup-image.webp [33m404[0m 2.500 ms - 163[0m
+::1 - - [10/Aug/2020:06:35:43 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:35:43 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:35:44 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:36:56 +0000] "GET /user/sigin HTTP/1.1" 200 2581 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:36:56 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:36:56 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:37:19 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:37:19 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:37:20 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:37:22 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:23 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:28 +0000] "GET /user/sigin HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:28 +0000] "GET /images/signup-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "POST /user/create HTTP/1.1" 302 66 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "GET /user/login HTTP/1.1" 200 3032 "http://localhost:8000/user/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "GET /css/style.css HTTP/1.1" 404 152 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:50:56 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:05 +0000] "POST /user/create-session HTTP/1.1" 302 46 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:05 +0000] "GET / HTTP/1.1" 200 5945 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:18 +0000] "POST /likes/toggle/?id=5f2d30c17ef991060c229157&type=Post HTTP/1.1" 200 58 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:20 +0000] "POST /likes/toggle/?id=5f2d30c17ef991060c229157&type=Post HTTP/1.1" 200 57 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:20 +0000] "POST /likes/toggle/?id=5f2d30c17ef991060c229157&type=Post HTTP/1.1" 200 58 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:30 +0000] "GET /user/signout HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:06:51:30 +0000] "GET / HTTP/1.1" 200 4166 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:36 +0000] "GET / HTTP/1.1" 200 3925 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:37 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:40 +0000] "GET /user/login HTTP/1.1" 200 3043 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:40 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:40 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:40 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:40 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:51 +0000] "POST /user/create-session HTTP/1.1" 302 46 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:51 +0000] "GET / HTTP/1.1" 200 5945 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:36:55 +0000] "POST /post/create HTTP/1.1" 200 287 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:37:00 +0000] "POST /comment/create HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:37:00 +0000] "GET / HTTP/1.1" 200 8371 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [10/Aug/2020:08:37:05 +0000] "POST /likes/toggle/?id=5f31072bc03f8a238cd9341a&type=Comment HTTP/1.1" 200 58 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:02 +0000] "GET /user/login HTTP/1.1" 302 70 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:02 +0000] "GET /user/profile HTTP/1.1" 404 151 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:06 +0000] "GET / HTTP/1.1" 200 7262 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:10 +0000] "GET /post/destroy/5f310727c03f8a238cd93419 HTTP/1.1" 302 88 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:10 +0000] "GET / HTTP/1.1" 200 5959 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:13 +0000] "POST /likes/toggle/?id=5f2d30c17ef991060c229157&type=Post HTTP/1.1" 200 57 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:15 +0000] "POST /likes/toggle/?id=5f2d30c17ef991060c229157&type=Post HTTP/1.1" 200 58 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:20 +0000] "POST /comment/create HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:20 +0000] "GET / HTTP/1.1" 200 6818 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:24 +0000] "GET /user/profile/5f2bed526895f849f87fdf91 HTTP/1.1" 200 485 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:27 +0000] "GET /user/profile/5f30ee50f150bf17f4560e8f HTTP/1.1" 200 875 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:35 +0000] "POST /user/update/5f30ee50f150bf17f4560e8f HTTP/1.1" 302 162 "http://localhost:8000/user/profile/5f30ee50f150bf17f4560e8f" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::ffff:127.0.0.1 - - [10/Aug/2020:08:38:35 +0000] "GET /user/profile/5f30ee50f150bf17f4560e8f HTTP/1.1" 200 961 "http://localhost:8000/user/profile/5f30ee50f150bf17f4560e8f" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+[0mGET / [32m200[0m 104.287 ms - 35175[0m
+[0mGET /favicon.ico [33m404[0m 2.968 ms - 150[0m
+[0mGET / [32m200[0m 69.139 ms - 35175[0m
+[0mGET /user/login [32m200[0m 5.326 ms - 3032[0m
+[0mGET /user/js/main.js [33m404[0m 3.291 ms - 154[0m
+[0mGET /images/signin-image.webp [33m404[0m 2.440 ms - 163[0m
+[0mGET /user/auth/google [36m302[0m 4.064 ms - 0[0m
+[0mGET /user/auth/google/callback?code=4%2F2wEK9dHS6XUcX-5-mcxqyaJRyO3D4fNvSnmR1O8Ivf7C9UijpBJkpliXxVI6CiRy__geA7gk9eDckT-snaculWM&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=2&prompt=consent [36m302[0m 519.932 ms - 46[0m
+[0mGET / [32m200[0m 70.415 ms - 60153[0m
+[0mGET /post/destroy/5f0ca95b16dbda3fc894d13f [36m302[0m 12.034 ms - 88[0m
+[0mGET / [32m200[0m 55.433 ms - 58601[0m
+[0mGET /user/profile/5ec3968b0b5a415428451809 [32m200[0m 10.792 ms - 569[0m
+[0mGET /user/profile/5f2da62fa150fb486cc048e9 [32m200[0m 9.547 ms - 517[0m
+[0mGET /user/profile/5ec3968b0b5a415428451809 [36m304[0m 8.383 ms - -[0m
+[0mGET /user/profile/5eb4435f3540c928b88ff29a [32m200[0m 7.622 ms - 517[0m

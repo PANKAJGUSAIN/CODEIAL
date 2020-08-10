@@ -12,12 +12,13 @@ const del = require('del');
 
 gulp.task('css',function(done){
     console.log('minifying css');
-    gulp.src('./assests/sass/**/*.sass')
+    //minification
+    gulp.src('./assests/sass/**/*.scss')
     .pipe(sass())                         //pipe calls all the sub middlewares in gulp
     .pipe(cssnano())
     .pipe(gulp.dest('./assests.css'));
-
-    return gulp.src('./assests/**/*.css')
+    // after minification changing file name convention form home.css to home-94jkj34j.css
+    gulp.src('./assests/**/*.css')
     .pipe(rev())
     .pipe(gulp.dest('./public/assests'))
     .pipe(rev.manifest({
@@ -25,7 +26,6 @@ gulp.task('css',function(done){
         merge : true
     }))
     .pipe(gulp.dest('./public/assests'));
-
     done();
 })
 

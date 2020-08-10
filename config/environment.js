@@ -12,7 +12,7 @@ const accessLogStream =rfs.createStream('access.log',{
 
 const development ={
     name : 'development' ,
-    asset_path : '/assests',
+    asset_path : './assests',
     session_cookie_key :'blahblahsomething', 
     db :'codeial_development',
     smtp:{
@@ -66,5 +66,11 @@ const production ={
         options : {stream : accessLogStream}
     }
 }
-
+//checks which environment is running development or production
+console.log("environment :" ,eval(process.env.CODEIAL_ENVIRONMENT) == undefined ? development.name : production.name);
 module.exports = eval(process.env.CODEIAL_ENVIRONMENT) == undefined ? development : eval(process.env.CODEIAL_ENVIRONMENT);
+
+//we have not stored CODEIAL_ENVIRONMENT IN THE SYSTEM VARIABLE ELSE WE HAVE SAVED IT IN THE package.json  as
+//  "prod_start": " set CODEIAL_ENVIRONMENT=production & nodemon index.js"
+//meaninng npm start - development 
+//         npm run prod_start - production 
