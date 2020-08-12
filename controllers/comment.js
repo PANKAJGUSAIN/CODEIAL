@@ -5,7 +5,7 @@ const commentsMailer =require('../mailers/comments_mailer');
 //importing worker
 const commentEmailWorker =require('../workers/comment_email_worker');
 
-const queue = require('../config/Kue');
+const queue = require('../config/kue');
 
 
 //to add post or comment in the database
