@@ -384,3 +384,19 @@
 [0mGET /user/profile/5f2da62fa150fb486cc048e9 [32m200[0m 9.547 ms - 517[0m
 [0mGET /user/profile/5ec3968b0b5a415428451809 [36m304[0m 8.383 ms - -[0m
 [0mGET /user/profile/5eb4435f3540c928b88ff29a [32m200[0m 7.622 ms - 517[0m
+::1 - - [12/Aug/2020:15:38:58 +0000] "GET / HTTP/1.1" 200 4501 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:00 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:07 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:11 +0000] "GET /user/login HTTP/1.1" 200 3043 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:11 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:11 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:11 +0000] "GET /images/signin-image.webp HTTP/1.1" 404 163 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:11 +0000] "GET /user/js/main.js HTTP/1.1" 404 154 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:24 +0000] "POST /user/create-session HTTP/1.1" 302 46 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:24 +0000] "GET / HTTP/1.1" 200 6822 "http://localhost:8000/user/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:29 +0000] "POST /post/create HTTP/1.1" 200 286 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:31 +0000] "POST /likes/toggle/?id=5f340d315d5f2860c886ba0e&type=Post HTTP/1.1" 200 58 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:34 +0000] "POST /comment/create HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:34 +0000] "GET / HTTP/1.1" 200 9247 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:53 +0000] "GET /user/signout HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+::1 - - [12/Aug/2020:15:39:53 +0000] "GET / HTTP/1.1" 200 6160 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
