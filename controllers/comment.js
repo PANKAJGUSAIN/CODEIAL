@@ -6,6 +6,7 @@ const commentsMailer =require('../mailers/comments_mailer');
 const commentEmailWorker =require('../workers/comment_email_worker');
 
 const queue = require('../config/kue');
+
 //to add post or comment in the database
 //this code won't work while sending out emails as we need async await function here sometime mailer is called even before the comment creation is complete.
 //so we need async await
