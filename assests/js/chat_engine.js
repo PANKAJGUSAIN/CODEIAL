@@ -3,7 +3,7 @@ class ChatEngine{
         this.chatBox =$(`#${chatBoxId}`);
           this.userEmail = userEmail;
 
-        this.socket = io.connect('http://34.239.249.179:5000');
+        this.socket = io.connect('http://34.239.249.179');
     
         if(this.userEmail){
             this.connectionHander();
